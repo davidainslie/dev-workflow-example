@@ -197,13 +197,13 @@ Let's take a slightly better approach by adding a second test service to our doc
 
 ```yaml
 web-test:
-	build:
-		context: .
-		dockerfile: Dockerfile.dev
-	volumes:
-		- /app/node_modules
-		- .:/app
-	command: ["npm", "test"]
+  build:
+    context: .
+    dockerfile: Dockerfile.dev
+  volumes:
+    - /app/node_modules
+    - .:/app
+  command: ["npm", "test"]
 ```
 
 ```bash
@@ -288,5 +288,6 @@ $ git init
 $ git add .
 $ git commit -m "Initial"
 $ git remote add origin https://github.com/davidainslie/dev-workflow-example.git
+$ git push origin master
 ```
 
