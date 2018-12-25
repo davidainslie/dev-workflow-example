@@ -285,5 +285,8 @@ $ docker run -p 8080:80 davidainslie/workflow-example
 
 ```bash
 $ git init
+$ git add .
+$ git commit -m "Initial"
+$ git remote add origin https://github.com/davidainslie/dev-workflow-example.git
 ```
 
