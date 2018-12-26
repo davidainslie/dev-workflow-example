@@ -360,3 +360,7 @@ Do not add the keys directly to the travis configuration. Add them as environmen
 > ![Travis env](docs/images/travis-env.png)
 
 > ![Travis AWS secrets](docs/images/travis-aws-secrets.png)
+
+Upon a travis deployment, we can go ahead and check AWS:
+
+> ![AWS deployment](docs/images/aws-deployment.png)
