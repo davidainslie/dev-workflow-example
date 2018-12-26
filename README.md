@@ -312,3 +312,51 @@ Before setting up a [.travis.yml](.travis.yml):
 What we want to tell travis using [.travis.yml](.travis.yml):
 
 > ![Travis plan](docs/images/travis-plan.png)
+
+## Deploy to AWS
+
+We'll deploy to Elastic Beanstalk:
+
+> ![Elastic beanstalk](docs/images/aws-elastic-beanstalk.png)
+
+> ![Elastic beanstalk setup 1](docs/images/aws-elastic-beanstalk-1.png)
+
+> ![Elastic beanstalk setup 2](docs/images/aws-elastic-beanstalk-2.png)
+
+> ![Elastic beanstalk setup 3](docs/images/aws-elastic-beanstalk-3.png)
+
+And what Elastic Beanstalk essentials gives us:
+
+> ![Elastic beanstalk setup result](docs/images/aws-elastic-beanstalk-result.png)
+
+Elastic Beanstalk will monitor traffic coming in (a load balancer is automatically created for us). If traffic hit configured thresholds then Elastic Beanstalk will automatically scale our application:
+
+> ![Elastic beanstalk scaling](docs/images/aws-elastic-beanstalk-scaling.png)
+
+The way we setup Beanstalk, there is a sample application deployed - just navigate to the URL highlighted:
+
+> ![Elastic beanstalk sample](docs/images/aws-elastic-beanstalk-sample.png)
+
+Wherever we are deploying to (AWS in this case), [.travis.yml](.travis.yml) needs the necessary configuration. Here are some screenshots of where the configurations were found in AWS:
+
+> ![Elastic beanstalk configurations](docs/images/aws-elastic-beanstalk-configurations.png)
+
+> ![Get to S3](docs/images/aws-get-to-s3.png)
+
+> ![S3](docs/images/aws-s3.png)
+
+Of course we need access keys. I'm going to reuse one of my keys, but you can always generate new:
+
+> ![AWS IAM](docs/images/aws-iam.png)
+
+> ![AWS IAM user](docs/images/aws-iam-user.png)
+
+> ![AWS IAM policy](docs/images/aws-iam-policy.png)
+
+> ![AWS IAM beanstalk](docs/images/aws-iam-beanstalk.png)
+
+Do not add the keys directly to the travis configuration. Add them as environment variables. In travis-ci:
+
+> ![Travis env](docs/images/travis-env.png)
+
+> ![Travis AWS secrets](docs/images/travis-aws-secrets.png)
