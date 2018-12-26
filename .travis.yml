@@ -1,0 +1,10 @@
+sudo: required
+
+services:
+  - docker
+
+before_install:
+  - docker build -t davidainslie/dev-workflow-example -f Dockerfile.dev .
+
+script:
+  - docker run davidainslie/dev-workflow-example npm run test -- --coverage

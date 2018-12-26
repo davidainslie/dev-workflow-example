@@ -291,3 +291,24 @@ $ git remote add origin https://github.com/davidainslie/dev-workflow-example.git
 $ git push origin master
 ```
 
+For easier pushing:
+
+```bash
+$ git push --set-upstream origin master
+```
+
+## Travis CI
+
+> ![Travis CI](docs/images/travis-ci.png)
+
+Sign into [travis-ci](https://travis-ci.org/):
+
+> ![Travis CI website](docs/images/travis-ci-website.png)
+
+Before setting up a [.travis.yml](.travis.yml):
+
+> ![Before travis setup](docs/images/before-travis-setup.png)
+
+What we want to tell travis using [.travis.yml](.travis.yml):
+
+> ![Travis plan](docs/images/travis-plan.png)
