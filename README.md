@@ -364,3 +364,13 @@ Do not add the keys directly to the travis configuration. Add them as environmen
 Upon a travis deployment, we can go ahead and check AWS:
 
 > ![AWS deployment](docs/images/aws-deployment.png)
+
+> ![AWS deployed via travis](docs/images/aws-deployed-via-travis.png)
+
+And the clicking the generated **URL** gives:
+
+> ![App on AWS](docs/images/app-on-aws.png)
+
+## Tear Down Deployment
+
+> ![Tear down deployment](docs/images/tear-down-deployment.png)
